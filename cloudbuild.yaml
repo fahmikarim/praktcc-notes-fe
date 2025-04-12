@@ -1,9 +1,9 @@
 steps:
-  - name: 'gcr.io/cloud-builders/gcloud'
+  # Step: Deploy langsung ke App Engine
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
     args: ['app', 'deploy', 'app.yaml', '--quiet']
+    dir: '.'
 
-# Optional: bisa tentukan project dan region jika perlu
-# options:
-#   logging: CLOUD_LOGGING_ONLY
-
-timeout: '900s'  # 15 menit
+options:
+  logging: CLOUD_LOGGING_ONLY

@@ -1,5 +1,6 @@
-runtime: python39  # Tidak menjalankan Python, hanya sebagai placeholder
-instance_class: F1  # Kelas instance terendah
+runtime: python39
+service: frontend-fahmi-028
+instance_class: F1
 
 handlers:
   - url: /
@@ -9,5 +10,3 @@ handlers:
   - url: /(.*)
     static_files: \1
     upload: (.*)
-
-default_expiration: "1h"
